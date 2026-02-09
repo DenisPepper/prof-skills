@@ -1,12 +1,9 @@
 import css from "./header.module.css";
 import avatar from "../../assets/avatar.jpg";
 import tg from "../../assets/tg.svg";
-import { Link, useLocation } from "react-router-dom";
-import { Navbar } from '../navbar/navbar';
 
 
 export const Header = () => {
-    const { pathname } = useLocation();
 
     return (
         <header className={css.header}>
@@ -45,7 +42,6 @@ export const Header = () => {
                     </ul>
                 </div>
             </div>
-            {false && <Navbar />}
         </header>
     );
 };
