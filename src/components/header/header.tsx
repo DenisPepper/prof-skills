@@ -1,8 +1,9 @@
 import css from "./header.module.css";
 import avatar from "../../assets/avatar.jpg";
 import tg from "../../assets/tg.svg";
-import vk from "../../assets/vk.svg";
 import { Link, useLocation } from "react-router-dom";
+import { Navbar } from '../navbar/navbar';
+
 
 export const Header = () => {
     const { pathname } = useLocation();
@@ -18,8 +19,8 @@ export const Header = () => {
                     height={150}
                 />
                 <div>
-                    <h1 className={css.title}>Конструктор-программист</h1>
-                    <h2 className={css.sub_title}>Перцев Денис, 43 год</h2>
+                    <h1 className={css.title}>3cad разработчик</h1>
+                    <h2 className={css.sub_title}>Перцев Денис, 44 года</h2>
                     <ul className={css.contacts}>
                         <li className={css.contact}>
                             <a href="tel:+79101493433">+7-910-149-34-33</a>
@@ -44,52 +45,7 @@ export const Header = () => {
                     </ul>
                 </div>
             </div>
-            <nav className={css.nav}>
-                <ul className={css.nav_list}>
-                    <li className={css.nav_item}>
-                        <Link
-                            className={`${css.nav_link} ${
-                                pathname === "/" ? css.nav_link_current : ""
-                            }`}
-                            to="/"
-                        >
-                            Прошлый опыт
-                        </Link>
-                    </li>
-                    <li className={css.nav_item}>
-                        <Link
-                            className={`${css.nav_link} ${
-                                pathname === "/skills"
-                                    ? css.nav_link_current
-                                    : ""
-                            }`}
-                            to="/skills"
-                        >
-                            Профессиональные навыки
-                        </Link>
-                    </li>
-                    <li className={css.nav_item}>
-                        <Link
-                            className={`${css.nav_link} ${
-                                pathname === "/ex" ? css.nav_link_current : ""
-                            }`}
-                            to="/ex"
-                        >
-                            Примеры работ
-                        </Link>
-                    </li>
-                    <li className={css.nav_item}>
-                        <Link
-                            className={`${css.nav_link} ${
-                                pathname === "/edu" ? css.nav_link_current : ""
-                            }`}
-                            to="/edu"
-                        >
-                            О себе
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
+            {false && <Navbar />}
         </header>
     );
 };
