@@ -17,7 +17,7 @@ export const Header = () => {
                 />
                 <div>
                     <h1 className={css.title}>3cad разработчик</h1>
-                    <h2 className={css.sub_title}>Перцев Денис, 44 года</h2>
+                    <h2 className={css.sub_title}>Перцев Денис, 44 года, Нижний Новгород</h2>
                     <ul className={css.contacts}>
                         <li className={css.contact}>
                             <a href="tel:+79101493433">+7-910-149-34-33</a>
